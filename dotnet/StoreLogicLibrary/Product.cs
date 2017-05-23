@@ -8,15 +8,21 @@ namespace StorageLogicLibrary
 {
     class Product
     {
-        private string Name { get; set; }
-        private int Stock { get; set; }
-        private double Price { get; set; }
+        public string Name { get; set; }
+        public int Stock { get; set; }
+        public double Price { get; set; }
 
         public Product(string name, int stock, double price)
         {
             Name = name;
             Stock = stock;
             Price = price;
+        }
+
+        public Boolean BuyProduct(Product p)
+        {
+            p.Stock += -1;
+            return true;
         }
     }
 }

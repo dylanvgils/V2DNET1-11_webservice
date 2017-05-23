@@ -33,5 +33,15 @@ namespace StorageLogicLibrary
 
             return false;
         }
+
+        public static Boolean BuyProduct(Product p)
+        {
+            if (StoreLogicRepository.BuyProduct(p))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
