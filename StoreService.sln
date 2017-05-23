@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreServiceLibrary", "Stor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreLogicLibtary", "StoreLogicLibtary\StoreLogicLibtary.csproj", "{D2AD7F82-865E-4641-9E43-FD1C09CD646B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreServiceHost", "StoreServiceHost\StoreServiceHost.csproj", "{CB389280-1695-48C8-B541-604341E54995}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +19,21 @@ Global
 		{04E84B1B-92E0-4891-ACDF-FF541C2680A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04E84B1B-92E0-4891-ACDF-FF541C2680A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04E84B1B-92E0-4891-ACDF-FF541C2680A7}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{D2AD7F82-865E-4641-9E43-FD1C09CD646B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D2AD7F82-865E-4641-9E43-FD1C09CD646B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2AD7F82-865E-4641-9E43-FD1C09CD646B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2AD7F82-865E-4641-9E43-FD1C09CD646B}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{9B8B9123-BDF4-41B9-97CF-E57ED1BC93F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8B9123-BDF4-41B9-97CF-E57ED1BC93F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8B9123-BDF4-41B9-97CF-E57ED1BC93F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8B9123-BDF4-41B9-97CF-E57ED1BC93F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB389280-1695-48C8-B541-604341E54995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB389280-1695-48C8-B541-604341E54995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB389280-1695-48C8-B541-604341E54995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB389280-1695-48C8-B541-604341E54995}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> c771f2b7bcb322a1136efbff1b1a7a1fa9eb6f93
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
