@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StoreLogicLibtary")]
+[assembly: AssemblyTitle("StoreLogicLibrary")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StoreLogicLibtary")]
+[assembly: AssemblyProduct("StoreLogicLibrary")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d2ad7f82-865e-4641-9e43-fd1c09cd646b")]
+[assembly: Guid("171635fb-3501-44df-8aee-9d48e782e447")]
 
 // Version information for an assembly consists of the following four values:
 //
