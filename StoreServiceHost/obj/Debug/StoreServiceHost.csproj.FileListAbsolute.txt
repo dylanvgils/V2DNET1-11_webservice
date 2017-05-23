@@ -1,0 +1,8 @@
+C:\Users\Mart\Desktop\V2DNET1-11_webservice\StoreServiceHost\bin\Debug\StoreServiceHost.exe.config
+C:\Users\Mart\Desktop\V2DNET1-11_webservice\StoreServiceHost\bin\Debug\StoreServiceHost.exe
+C:\Users\Mart\Desktop\V2DNET1-11_webservice\StoreServiceHost\bin\Debug\StoreServiceHost.pdb
+C:\Users\Mart\Desktop\V2DNET1-11_webservice\StoreServiceHost\bin\Debug\StoreServiceLibrary.dll
+C:\Users\Mart\Desktop\V2DNET1-11_webservice\StoreServiceHost\bin\Debug\StoreServiceLibrary.pdb
+C:\Users\Mart\Desktop\V2DNET1-11_webservice\StoreServiceHost\obj\Debug\StoreServiceHost.csprojResolveAssemblyReference.cache
+C:\Users\Mart\Desktop\V2DNET1-11_webservice\StoreServiceHost\obj\Debug\StoreServiceHost.exe
+C:\Users\Mart\Desktop\V2DNET1-11_webservice\StoreServiceHost\obj\Debug\StoreServiceHost.pdb

@@ -12,6 +12,10 @@ namespace StoreServiceLibrary
     public interface IStoreService
     {
         [OperationContract]
-        void DoWork();
+        // Alle functies van de service
+        Boolean CheckLogin(String username, String password);
+        String Register(String username);
+
+       
     }
 }
