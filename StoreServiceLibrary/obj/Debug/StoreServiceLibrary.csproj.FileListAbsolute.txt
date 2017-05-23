@@ -1,0 +1,6 @@
+C:\Users\dylan\projects\C-Sharp\V2DNET1-11_webservice\StoreServiceLibrary\bin\Debug\StoreServiceLibrary.dll.config
+C:\Users\dylan\projects\C-Sharp\V2DNET1-11_webservice\StoreServiceLibrary\bin\Debug\StoreServiceLibrary.dll
+C:\Users\dylan\projects\C-Sharp\V2DNET1-11_webservice\StoreServiceLibrary\bin\Debug\StoreServiceLibrary.pdb
+C:\Users\dylan\projects\C-Sharp\V2DNET1-11_webservice\StoreServiceLibrary\obj\Debug\StoreServiceLibrary.csprojResolveAssemblyReference.cache
+C:\Users\dylan\projects\C-Sharp\V2DNET1-11_webservice\StoreServiceLibrary\obj\Debug\StoreServiceLibrary.dll
+C:\Users\dylan\projects\C-Sharp\V2DNET1-11_webservice\StoreServiceLibrary\obj\Debug\StoreServiceLibrary.pdb
