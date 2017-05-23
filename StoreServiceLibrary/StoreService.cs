@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using StoreServiceLibrary;
+using StoreLogicLibtary;
 
 namespace StoreServiceLibrary
 {
@@ -14,19 +14,24 @@ namespace StoreServiceLibrary
     {
         public String Register(string username)
         {
-            var reversedWords = string.Join(" ",
+            Customer c1 = new Customer(username);
+
+            if (c1 != null)
+            {
+                var reversedWords = string.Join(" ",
                 username.Split(' ')
                     .Select(x => new String(x.Reverse().ToArray())));
 
-            return reversedWords;
+                return reversedWords;
+            }
+
+            return "Error";
         }
 
         public Boolean CheckLogin(String username, String password)
         {
             // Roep aan Customers.CheckLogin
-            
             return true;
-            
         }
     }
 }
