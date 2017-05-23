@@ -4,19 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoreLogicLibrary
+namespace StoreLogicLibtary
 {
-    class Product
+    public class Customer
     {
-        private string Name { get; set; }
-        private int Stock { get; set; }
-        private double Price { get; set; }
+        public string Username { get; set; }
+        public double Balance { get; private set; } = 100.00;
+        private string _password;
 
-        public Product(string name, int stock, double price)
+        public Customer(string username)
         {
-            Name = name;
-            Stock = stock;
-            Price = price;
+            Username = username;
+            _password = generatePassword();
+        }
+
+        private string generatePassword()
+        {
+            char[] charArray = Username.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+
+        public bool VerifyLogin(string username, string password)
+        {
+            return Username.Equals(username) && _password.Equals(password);
+        }
+
+        public bool UpdateBalance(double price)
+        {
+            if (Balance < price) return false;
+            Balance -= price;
+            return true;
         }
     }
 }
