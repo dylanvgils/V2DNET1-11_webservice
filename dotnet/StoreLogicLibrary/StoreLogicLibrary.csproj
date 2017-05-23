@@ -43,6 +43,8 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StoreLogicRepository.cs" />
+    <Compile Include="StoreLogicService.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

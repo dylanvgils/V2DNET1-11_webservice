@@ -1,17 +1,17 @@
-﻿using StoreLogicLibtary;
+﻿using StoreLogicLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StorageLogicLibrary
+namespace StoreLogicLibrary
 {
     static class StoreLogicRepository
     {
 
-        public static List<Customer> Customers;
-        public static List<Product> Products;
+        public static List<Customer> Customers = new List<Customer>();
+        public static List<Product> Products = new List<Product>();
 
         public static Boolean AddCustomer(Customer c)
         {

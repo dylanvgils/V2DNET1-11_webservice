@@ -93,5 +93,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StoreLogicLibrary\StoreLogicLibrary.csproj">
+      <Project>{c3f8b4a6-5035-4bd3-86e6-c131aa3363ed}</Project>
+      <Name>StoreLogicLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

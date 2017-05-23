@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using StoreLogicLibrary;
 
 namespace WpfApp1
 {
@@ -26,6 +27,20 @@ namespace WpfApp1
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (StoreLogicService.VerifyLogin(
+                gebruikersnaam_textbox.Text,
+                wachtwoord_textbox.Text))
+            {
+
+            } else
+            {
+                // Fout wachtwoord
+                MessageBox.Show("Deze gebruikersnaam wachtwoord combinatie bestaat niet.");
+            }
+        }
+
+        private void gebruikersnaam_textbox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

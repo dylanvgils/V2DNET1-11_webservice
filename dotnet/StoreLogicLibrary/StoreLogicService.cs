@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using StorageLogicLibrary;
+using StoreLogicLibrary;
 
-namespace StorageLogicLibrary
+namespace StoreLogicLibrary
 {
     public static class StoreLogicService
     {
