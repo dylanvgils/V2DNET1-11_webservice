@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StorageLogicLibrary
 {
-    class Product
+    public class Product
     {
         public string Name { get; set; }
         public int Stock { get; set; }
