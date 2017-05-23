@@ -5,8 +5,10 @@ import javax.swing.*;
  */
 public class OreoStore {
     private JPanel mainPanel;
-    private JTextField textField1;
-    private JPasswordField passwordField1;
+    private JTextField usernameField;
+    private JPasswordField passwordField;
+    private JButton signInBtn;
+    private JButton registerBtn;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("OreoStore");
