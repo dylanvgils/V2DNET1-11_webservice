@@ -5,7 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
-using StoreLogicLibtary;
+using StorageLogicLibrary;
 
 namespace StoreServiceLibrary
 {
@@ -14,9 +14,9 @@ namespace StoreServiceLibrary
     {
         public String Register(string username)
         {
-            Customer c1 = new Customer(username);
+            Customer cust = new Customer(username);
 
-            if (c1 != null)
+            if (StoreLogicService.RegisterCustomer(cust))
             {
                 var reversedWords = string.Join(" ",
                 username.Split(' ')
@@ -31,7 +31,12 @@ namespace StoreServiceLibrary
         public Boolean CheckLogin(String username, String password)
         {
             // Roep aan Customers.CheckLogin
-            return true;
+            if (StoreLogicService.VerifyLogin(username, password))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

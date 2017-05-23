@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoreLogicLibtary
+namespace StorageLogicLibrary
 {
     public class Customer
     {

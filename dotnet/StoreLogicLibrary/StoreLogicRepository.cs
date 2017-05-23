@@ -10,5 +10,17 @@ namespace StorageLogicLibrary
     static class StoreLogicRepository
     {
 
+        public static List<Customer> Customers;
+
+        public static Boolean AddCustomer(Customer c)
+        {
+            if (c != null)
+            {
+                Customers.Add(c);
+                return true;
+            }
+
+            return false;
+        }
     }
 }
