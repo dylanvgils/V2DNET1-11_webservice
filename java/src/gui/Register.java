@@ -19,6 +19,7 @@ public class Register {
         frame = new JFrame("Oreo Store - Registreren");
         frame.setContentPane(mainPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.setResizable(false);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
