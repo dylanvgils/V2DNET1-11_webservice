@@ -1,12 +1,13 @@
-package gui;
+package oreoStore.view;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by dylan on 24-5-2017.
  */
-public class Store {
+public class StoreView {
     private JFrame frame;
     private JPanel mainPanel;
     private JTextArea textArea1;
@@ -14,33 +15,21 @@ public class Store {
     private JButton orderBtn;
     private JButton refreshBtn;
 
-    public Store() {
-        init();
-    }
-
-    private void init() {
-        frame = new JFrame("Oreo Store");
+    public void init() {
+        frame = new JFrame("Oreo StoreView");
         frame.setContentPane(mainPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setResizable(false);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
-        // Event handlers
-        refreshBtn.addActionListener(e -> performButtonAction(e, this::refreshFrame));
-        orderBtn.addActionListener(e -> performButtonAction(e, this::order));
     }
 
-    private void performButtonAction(ActionEvent event, Runnable func) {
-        func.run();
+    public void addRefreshListener(ActionListener listener) {
+        refreshBtn.addActionListener(listener);
     }
 
-    private void refreshFrame() {
-
-    }
-
-    private void order() {
-
+    public void addOrderListener(ActionListener listener) {
+        orderBtn.addActionListener(listener);
     }
 }

@@ -1,34 +1,32 @@
-package gui;
+package oreoStore.view;
 
 import javax.swing.*;
+import java.awt.event.ActionListener;
 
 /**
  * Created by dylan on 24-5-2017.
  */
-public class Register {
+public class RegisterView {
     private JFrame frame;
     private JTextField usernameField;
     private JPanel mainPanel;
     private JButton registerBtn;
 
-    public Register() {
-        init();
-    }
-
     public void init() {
-        frame = new JFrame("Oreo Store - Registreren");
+        frame = new JFrame("Oreo StoreView - Registreren");
         frame.setContentPane(mainPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setResizable(false);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-
-        // Event handlers
-        registerBtn.addActionListener(e -> register());
     }
 
-    private void register() {
+    public void addRegisterListener(ActionListener listener) {
+        registerBtn.addActionListener(listener);
+    }
+
+    public void confirmRegistration() {
         JOptionPane.showMessageDialog(null
                 ,"<html><body>"
                         + "U bent gerigistreerd! "
@@ -38,8 +36,9 @@ public class Register {
                 , "U bent gerigistreerd!"
                 , JOptionPane.INFORMATION_MESSAGE
         );
+    }
 
+    public void close() {
         frame.dispose();
-        new SignIn();
     }
 }
