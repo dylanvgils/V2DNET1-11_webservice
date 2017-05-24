@@ -2,8 +2,6 @@ package gui;
 
 import javax.swing.*;
 
-import static javax.swing.JOptionPane.showMessageDialog;
-
 /**
  * Created by dylan on 23-5-2017.
  */
@@ -28,16 +26,20 @@ public class Signin {
         frame.setVisible(true);
 
         // Event handlers
-        registerBtn.addActionListener(e -> register());
-        signInBtn.addActionListener(e -> signin());
+        registerBtn.addActionListener(e -> performButtonAction(this::register));
+        signInBtn.addActionListener(e -> performButtonAction(this::signin));
+    }
+
+    private void performButtonAction(Runnable func) {
+        frame.dispose();
+        func.run();
     }
 
     private void signin() {
-        showMessageDialog(null, "You clicked me!");
+        new Store();
     }
 
     private void register() {
-        frame.dispose();
         new Register();
     }
 }
