@@ -10,7 +10,7 @@ namespace StoreLogicLibrary
     static class StoreLogicRepository
     {
 
-        public static List<Customer> Customers = new List<Customer>();
+        public static List<Customer> Customers = new List<Customer>() { new Customer("dylan") };
         public static List<Product> Products = new List<Product>();
 
         public static Boolean AddCustomer(Customer c)

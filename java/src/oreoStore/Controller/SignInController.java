@@ -3,6 +3,8 @@ package oreoStore.Controller;
 import oreoStore.view.RegisterView;
 import oreoStore.view.SignInView;
 import oreoStore.view.StoreView;
+import org.tempuri.IStoreService;
+import org.tempuri.StoreService;
 
 import java.awt.event.ActionEvent;
 
@@ -24,6 +26,11 @@ public class SignInController {
     }
 
     private void signIn(ActionEvent event) {
+        StoreService storeService = new StoreService();
+        IStoreService proxy = storeService.getBasicHttpBindingIStoreService();
+
+        System.out.println(proxy.checkLogin("dylan", "nalyd"));
+
         view.close();
         new StoreController(new StoreView());
     }
