@@ -10,7 +10,7 @@ public class Store {
     private JPanel mainPanel;
     private JTextArea textArea1;
     private JList list1;
-    private JButton button1;
+    private JButton orderBtn;
     private JButton refreshBtn;
 
     public Store() {
@@ -26,5 +26,19 @@ public class Store {
         frame.setVisible(true);
 
         // Event handlers
+        refreshBtn.addActionListener(e -> performButtonAction(this::refreshFrame));
+        orderBtn.addActionListener(e -> performButtonAction(this::order));
+    }
+
+    private void performButtonAction(Runnable func) {
+        func.run();
+    }
+
+    private void refreshFrame() {
+
+    }
+
+    private void order() {
+
     }
 }
