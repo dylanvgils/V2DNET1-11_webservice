@@ -1,11 +1,12 @@
 package gui;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 /**
  * Created by dylan on 23-5-2017.
  */
-public class Signin {
+public class SignIn {
     private JFrame frame;
     private JPanel mainPanel;
     private JTextField usernameField;
@@ -13,7 +14,7 @@ public class Signin {
     private JButton signInBtn;
     private JButton registerBtn;
 
-    public Signin() {
+    public SignIn() {
         init();
     }
 
@@ -26,16 +27,16 @@ public class Signin {
         frame.setVisible(true);
 
         // Event handlers
-        registerBtn.addActionListener(e -> performButtonAction(this::register));
-        signInBtn.addActionListener(e -> performButtonAction(this::signin));
+        registerBtn.addActionListener(e -> performButtonAction(e, this::register));
+        signInBtn.addActionListener(e -> performButtonAction(e, this::signIn));
     }
 
-    private void performButtonAction(Runnable func) {
+    private void performButtonAction(ActionEvent event, Runnable func) {
         frame.dispose();
         func.run();
     }
 
-    private void signin() {
+    private void signIn() {
         new Store();
     }
 

@@ -39,6 +39,6 @@ public class Register {
         );
 
         frame.dispose();
-        new Signin();
+        new SignIn();
     }
 }

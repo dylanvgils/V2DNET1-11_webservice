@@ -1,6 +1,7 @@
 package gui;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
 
 /**
  * Created by dylan on 24-5-2017.
@@ -26,11 +27,11 @@ public class Store {
         frame.setVisible(true);
 
         // Event handlers
-        refreshBtn.addActionListener(e -> performButtonAction(this::refreshFrame));
-        orderBtn.addActionListener(e -> performButtonAction(this::order));
+        refreshBtn.addActionListener(e -> performButtonAction(e, this::refreshFrame));
+        orderBtn.addActionListener(e -> performButtonAction(e, this::order));
     }
 
-    private void performButtonAction(Runnable func) {
+    private void performButtonAction(ActionEvent event, Runnable func) {
         func.run();
     }
 
