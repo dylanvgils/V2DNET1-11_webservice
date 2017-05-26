@@ -1,6 +1,6 @@
 package oreoStore.controller;
 
-import oreoStore.Service.Service;
+import oreoStore.service.Service;
 import oreoStore.model.CustomerModel;
 import oreoStore.model.StoreModel;
 import oreoStore.view.RegisterView;

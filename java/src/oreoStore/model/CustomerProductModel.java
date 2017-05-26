@@ -13,4 +13,13 @@ public class CustomerProductModel extends ProductModel {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
+
+    public double calcSubTotal() {
+        return price * quantity;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%s : %s : €%3.2f", name, quantity, calcSubTotal());
+    }
 }

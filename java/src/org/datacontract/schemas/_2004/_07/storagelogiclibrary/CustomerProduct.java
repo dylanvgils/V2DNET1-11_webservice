@@ -1,11 +1,12 @@
 
 package org.datacontract.schemas._2004._07.storagelogiclibrary;
 
+import org.datacontract.schemas._2004._07.storelogiclibrary.Product;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
-import org.datacontract.schemas._2004._07.storelogiclibrary.Product;
 
 
 /**

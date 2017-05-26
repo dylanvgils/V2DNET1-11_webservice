@@ -1,4 +1,4 @@
-package oreoStore.Service;
+package oreoStore.service;
 
 import oreoStore.model.CustomerModel;
 import oreoStore.model.CustomerProductModel;

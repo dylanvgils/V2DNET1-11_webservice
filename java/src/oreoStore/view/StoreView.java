@@ -60,9 +60,8 @@ public class StoreView {
 
         orders.setText(null);
         for (CustomerProductModel p : products) {
-            double subTotaal = p.getPrice() * p.getQuantity();
-            orders.append(String.format("%sx : %s : €%2.2f (totaal: €%3.2f)\n", p.getQuantity(), p.getName(), p.getPrice(), subTotaal));
-            totaal += subTotaal;
+            orders.append(p.toString() + "\n");
+            totaal += p.calcSubTotal();
         }
 
         orders.append(String.format("\n Totaal: €%1.2f", totaal));
