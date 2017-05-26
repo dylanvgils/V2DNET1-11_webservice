@@ -53,7 +53,7 @@ namespace StoreLogicLibrary
             foreach (var o in Orders)
             {
                 if (!p.Name.Equals(o.Name)) continue;
-                o.Quantity++;
+                o.Quantity += p.Quantity;
                 return;
             }
 

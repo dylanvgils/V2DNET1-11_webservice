@@ -1,5 +1,6 @@
 package oreoStore.controller;
 
+import oreoStore.Service.Service;
 import oreoStore.model.CustomerModel;
 import oreoStore.view.RegisterView;
 import oreoStore.view.SignInView;
@@ -10,10 +11,13 @@ import java.awt.event.ActionEvent;
  * Created by dylan on 24-5-2017.
  */
 public class RegisterController {
+    private CustomerModel model;
     private RegisterView view;
 
-    public RegisterController(RegisterView registerView) {
+    public RegisterController(RegisterView registerView, CustomerModel customerModel) {
+        // Register view and model
         view = registerView;
+        model = customerModel;
 
         // Event listeners
         view.addRegisterListener(this::register);
@@ -23,11 +27,16 @@ public class RegisterController {
     }
 
     private void register(ActionEvent event) {
-        view.confirmRegistration();
-        view.close();
+        model.setUsername(view.getUsernameFieldValue());
 
-        CustomerModel model = new CustomerModel();
-        SignInView view = new SignInView(model);
-        new SignInController(model, view);
+        if (Service.registerCustomer(model) != null) {
+            view.confirmRegistration(model.getUsername(), model.getPassword());
+            view.close();
+            new SignInController(new SignInView(), new CustomerModel());
+            return;
+        }
+
+        view.resetUsernameField();
+        view.showError("Registratiefout", "Helaas is deze gebruikersnaam is al in gebruik.");
     }
 }

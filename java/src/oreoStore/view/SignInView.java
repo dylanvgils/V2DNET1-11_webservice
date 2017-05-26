@@ -1,9 +1,6 @@
 package oreoStore.view;
 
-import oreoStore.Controller.RegisterController;
-
 import javax.swing.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
@@ -27,12 +24,28 @@ public class SignInView {
         frame.setVisible(true);
     }
 
+    public String getUsernameFieldValue() {
+        return usernameField.getText();
+    }
+
+    public String getPasswordFieldValue() {
+        return String.copyValueOf(passwordField.getPassword());
+    }
+
+    public void clearPasswordField() {
+        passwordField.setText(null);
+    }
+
     public void addSignInListener(ActionListener listener) {
         signInBtn.addActionListener(listener);
     }
 
     public void addRegisterListener(ActionListener listener) {
         registerBtn.addActionListener(listener);
+    }
+
+    public void showError(String title, String message) {
+        JOptionPane.showMessageDialog(null, message, title, JOptionPane.ERROR_MESSAGE);
     }
 
     public void close() {

@@ -1,11 +1,12 @@
 package oreoStore.model;
 
 /**
- * Created by dylan on 24-5-2017.
+ * Created by dylan on 26-5-2017.
  */
-public class CustomerModel extends Model {
+public class CustomerModel {
     private String username;
     private String password;
+    private double balance;
 
     public String getUsername() {
         return username;
@@ -23,7 +24,11 @@ public class CustomerModel extends Model {
         this.password = password;
     }
 
-    public boolean checkLogin() {
-        return storeService.checkLogin(username, password);
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }

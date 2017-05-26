@@ -1,11 +1,11 @@
 package oreoStore.controller;
 
+import oreoStore.Service.Service;
 import oreoStore.model.CustomerModel;
+import oreoStore.model.StoreModel;
 import oreoStore.view.RegisterView;
 import oreoStore.view.SignInView;
 import oreoStore.view.StoreView;
-import org.tempuri.IStoreService;
-import org.tempuri.StoreService;
 
 import java.awt.event.ActionEvent;
 
@@ -16,9 +16,10 @@ public class SignInController {
     private CustomerModel model;
     private SignInView view;
 
-    public SignInController(CustomerModel customerModel, SignInView signInView) {
-        model = customerModel;
+    public SignInController(SignInView signInView, CustomerModel customerModel) {
+        // Register view and model
         view = signInView;
+        model = customerModel;
 
         // Event handlers
         view.addSignInListener(this::signIn);
@@ -29,13 +30,21 @@ public class SignInController {
     }
 
     private void signIn(ActionEvent event) {
-        System.out.println(model.getUsername());
-        view.close();
-        new StoreController(new StoreView());
+        model.setUsername(view.getUsernameFieldValue());
+        model.setPassword(view.getPasswordFieldValue());
+
+        if (Service.checkLogin(model)) {
+            view.close();
+            new StoreController(new StoreView(), new StoreModel(model));
+            return;
+        }
+
+        view.clearPasswordField();
+        view.showError("Aanmeldfout", "De ingevoerde gegevens zijn onjuist.");
     }
 
     private void register(ActionEvent event) {
         view.close();
-        new RegisterController(new RegisterView());
+        new RegisterController(new RegisterView(), new CustomerModel());
     }
 }
