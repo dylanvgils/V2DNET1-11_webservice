@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StorageLogicLibrary;
 
 namespace StoreLogicLibrary
 {
@@ -11,31 +12,28 @@ namespace StoreLogicLibrary
     {
 
         public static List<Customer> Customers = new List<Customer>() { new Customer("dylan") };
-        public static List<Product> Products = new List<Product>();
+        public static List<StoreProduct> Products = new List<StoreProduct>() { new StoreProduct("Classic Oreo", 15, .99), new StoreProduct("Vanilla Oreo", 5, 1.05)};
 
-        public static Boolean AddCustomer(Customer c)
+        public static Customer GetCustomer(string username)
         {
-            if (c != null)
-            {
-                Customers.Add(c);
-                return true;
-            }
-
-            return false;
+            return Customers.FirstOrDefault(c => c.Username.Equals(username));
         }
 
-        public static Boolean BuyProduct(Product p)
+        public static StoreProduct GetProduct(string productNaam)
         {
-            foreach (Product product in Products)
-            {
-                if (product.Name.Equals(p.Name))
-                {
-                    product.BuyProduct(p);
-                    return true;
-                }
-            }
+            return Products.FirstOrDefault(p => p.Name.Equals(productNaam));
+        }
 
-            return false;
+        public static bool AddCustomer(Customer c)
+        {
+            if (c == null) return false;
+            Customers.Add(c);
+            return true;
+        }
+
+        public static IEnumerable<StoreProduct> GetProducts()
+        {
+            return Products;
         }
     }
 }

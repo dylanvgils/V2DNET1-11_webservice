@@ -1,21 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using StorageLogicLibrary;
 
 namespace StoreLogicLibrary
 {
+    [DataContract]
     public class Customer
     {
+        [DataMember]
         public string Username { get; set; }
+
+        [DataMember]
         public double Balance { get; private set; } = 100.00;
-        private string _password;
+
+        [DataMember]
+        public string Password { get; set; }
+
+        [DataMember]
+        public List<CustomerProduct> Orders { get; set; } = new List<CustomerProduct>();
 
         public Customer(string username)
         {
             Username = username;
-            _password = generatePassword();
+            Password = generatePassword();
         }
 
         private string generatePassword()
@@ -27,15 +38,26 @@ namespace StoreLogicLibrary
 
         public bool VerifyLogin(string username, string password)
         {
-            // Username.Equals(username) && _password.Equals(password);
-            return true; 
+            return Username.Equals(username) && Password.Equals(password);
         }
 
-        public bool UpdateBalance(double price)
+        public bool UpdateBalance(double price, int quantity)
         {
             if (Balance < price) return false;
-            Balance -= price;
+            Balance -= price * quantity;
             return true;
+        }
+
+        public void AddOrder(CustomerProduct p)
+        {
+            foreach (var o in Orders)
+            {
+                if (!p.Name.Equals(o.Name)) continue;
+                o.Quantity++;
+                return;
+            }
+
+            Orders.Add(p);
         }
     }
 }

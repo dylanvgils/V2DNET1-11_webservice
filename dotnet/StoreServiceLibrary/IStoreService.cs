@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using StorageLogicLibrary;
+using StoreLogicLibrary;
 
 namespace StoreServiceLibrary
 {
@@ -13,9 +15,21 @@ namespace StoreServiceLibrary
     {
         [OperationContract]
         // Alle functies van de service
-        Boolean CheckLogin(String username, String password);
-        String Register(String username);
+        bool CheckLogin(String username, String password);
 
-       
+        [OperationContract]
+        string Register(String username);
+
+        [OperationContract]
+        IEnumerable<StoreProduct> GetProducts();
+
+        [OperationContract]
+        bool BuyProduct(string username, string productName, int quantity);
+
+        [OperationContract]
+        IEnumerable<CustomerProduct> GetAllOrders(string username);
+
+        [OperationContract]
+        double GetBalance(string username);
     }
 }
