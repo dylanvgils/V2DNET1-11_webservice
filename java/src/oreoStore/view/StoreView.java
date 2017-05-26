@@ -36,7 +36,11 @@ public class StoreView {
     }
 
     public StoreProductModel getSelectedStockItem() {
-        return stockModel.get(stock.getSelectedIndex());
+        try {
+            return stockModel.get(stock.getSelectedIndex());
+        } catch (IndexOutOfBoundsException e) {
+            return null;
+        }
     }
 
     public int getQuantity() {
