@@ -15,7 +15,7 @@ public class SignInView {
     private JButton registerBtn;
 
     public void init() {
-        frame = new JFrame("Oreo StoreView - Inloggen");
+        frame = new JFrame("Oreo Store - Inloggen");
         frame.setContentPane(mainPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setResizable(false);

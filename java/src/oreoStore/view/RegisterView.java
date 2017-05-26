@@ -13,7 +13,7 @@ public class RegisterView {
     private JButton registerBtn;
 
     public void init() {
-        frame = new JFrame("Oreo StoreView - Registreren");
+        frame = new JFrame("Oreo Store - Registreren");
         frame.setContentPane(mainPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setResizable(false);

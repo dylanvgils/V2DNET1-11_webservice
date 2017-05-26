@@ -24,7 +24,7 @@ public class StoreView {
     private JLabel user;
 
     public void init() {
-        frame = new JFrame("Oreo StoreView");
+        frame = new JFrame("Oreo Store");
         frame.setContentPane(mainPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setResizable(false);
