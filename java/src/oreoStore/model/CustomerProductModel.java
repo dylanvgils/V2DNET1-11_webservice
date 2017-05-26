@@ -20,6 +20,6 @@ public class CustomerProductModel extends ProductModel {
 
     @Override
     public String toString() {
-        return String.format("%s : %s : €%3.2f", name, quantity, calcSubTotal());
+        return String.format("%sx : %s : €%3.2f", quantity, name, calcSubTotal());
     }
 }
