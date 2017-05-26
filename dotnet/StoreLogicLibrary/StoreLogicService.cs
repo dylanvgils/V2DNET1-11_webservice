@@ -28,7 +28,7 @@ namespace StoreLogicLibrary
                 var p = StoreLogicRepository.GetProduct(productNaam);
                 var c = StoreLogicRepository.GetCustomer(username);
 
-                if (!p.LowerStock(quantity) || !c.UpdateBalance(p.Price, quantity)) return false;
+                if (!p.LowerStock(quantity) || !c.UpdateBalance(p.Price * quantity)) return false;
                 c.AddOrder(new CustomerProduct(p.Name, quantity, p.Price));
                 return true;
             }

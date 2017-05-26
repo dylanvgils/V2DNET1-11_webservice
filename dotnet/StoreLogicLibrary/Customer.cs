@@ -41,10 +41,10 @@ namespace StoreLogicLibrary
             return Username.Equals(username) && Password.Equals(password);
         }
 
-        public bool UpdateBalance(double price, int quantity)
+        public bool UpdateBalance(double price)
         {
             if (Balance < price) return false;
-            Balance -= price * quantity;
+            Balance -= price;
             return true;
         }
 
