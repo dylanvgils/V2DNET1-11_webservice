@@ -1,7 +1,6 @@
 package oreoStore;
 
-import oreoStore.controller.SignInController;
-import oreoStore.model.CustomerModel;
+import oreoStore.Controller.SignInController;
 import oreoStore.view.SignInView;
 
 /**
@@ -9,9 +8,6 @@ import oreoStore.view.SignInView;
  */
 public class OreoStore {
     public static void main(String[] args) {
-        CustomerModel model = new CustomerModel();
-        SignInView view = new SignInView(model);
-
-        new SignInController(model, view);
+        new SignInController(new SignInView());
     }
 }
