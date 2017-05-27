@@ -57,7 +57,7 @@ public class StoreController {
         }
 
         if ((item = view.getSelectedStockItem()) == null) {
-            view.showError("Geen product geselecteerd", "<html><body>Er is geen product geselecteerd, <br> selecteer een product in voorrraad</body></html>");
+            view.showError("Geen product geselecteerd", "<html><body>Er is geen product geselecteerd, <br> selecteer een product uit voorrraad</body></html>");
             return;
         }
 
