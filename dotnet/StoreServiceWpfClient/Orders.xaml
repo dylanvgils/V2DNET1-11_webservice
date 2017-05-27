@@ -8,8 +8,12 @@
         Title="Orders" Height="289.474" Width="464.035">
     <Grid>
         <Label Content="Oreo Store" HorizontalAlignment="Left" Margin="104,31,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20"/>
-        <Label x:Name="username_label_Copy" Content="Je huidige saldo is: " HorizontalAlignment="Left" Margin="30,71,-112,0" VerticalAlignment="Top"/>
-        <Label x:Name="saldo_label" Content="Test waarde" HorizontalAlignment="Left" Margin="166,71,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="username_label_Copy" Content="Huidige Saldo: " HorizontalAlignment="Left" Margin="30,93,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="saldo_label" Content="€100" HorizontalAlignment="Left" Margin="116,93,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="username_label_Copy1" Content="Bestelhistorie:&#xD;&#xA;" HorizontalAlignment="Left" Margin="30,124,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name="orders_listbox" HorizontalAlignment="Left" Height="100" Margin="30,152,0,0" VerticalAlignment="Top" Width="330"/>
+        <Label x:Name="username_label_Copy2" Content="Profiel van:" HorizontalAlignment="Left" Margin="30,62,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="username_label" Content="Dylan" HorizontalAlignment="Left" Margin="116,62,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

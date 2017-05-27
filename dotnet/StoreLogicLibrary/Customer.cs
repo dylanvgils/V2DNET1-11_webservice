@@ -21,7 +21,7 @@ namespace StoreLogicLibrary
         public string Password { get; set; }
 
         [DataMember]
-        public List<CustomerProduct> Orders { get; set; } = new List<CustomerProduct>();
+        public List<CustomerProduct> Orders { get; set; } = new List<CustomerProduct>() { new CustomerProduct("Classic Oreo", 5, 10) };
 
         public Customer(string username)
         {

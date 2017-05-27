@@ -33,7 +33,7 @@ namespace WpfApp1
                 gebruikersnaam_textbox.Text,
                 wachtwoord_textbox.Text)) {
                 LoggedIn subWindow = new LoggedIn();
-                subWindow.username_label.Content = gebruikersnaam_textbox.Text;
+                subWindow.username_label.Content = gebruikersnaam_textbox.Text.ToString();
                 subWindow.Show();
                 this.Close();
             }

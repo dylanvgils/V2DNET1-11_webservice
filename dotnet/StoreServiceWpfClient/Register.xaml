@@ -5,16 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StoreServiceWpfClient"
         mc:Ignorable="d"
-        Title="Register" Height="345.614" Width="465.789">
+        Title="Register" Height="280.598" Width="462.367">
     <Grid Margin="2,0,-2,0">
         <TextBox x:Name="username_textbox" HorizontalAlignment="Left" Height="23" Margin="307,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="140,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="username_label" Content="Voel hier uw gewenste gebruikersnaam in" HorizontalAlignment="Left" Margin="30,151,0,0" VerticalAlignment="Top"/>
-        <Button Content="Ga terug (Zonder opslaan)" HorizontalAlignment="Left" Margin="28,279,0,0" VerticalAlignment="Top" Width="174" Height="29"/>
+        <Button Content="Ga terug (Zonder opslaan)" HorizontalAlignment="Left" Margin="30,196,0,0" VerticalAlignment="Top" Width="174" Height="29" Click="Button_Click"/>
         <Label Content="Oreo Store" HorizontalAlignment="Left" Margin="104,31,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20"/>
         <Label x:Name="username_label_Copy" Content="Je kunt hieronder een gebruikersnaam invoeren. &#xD;&#xA;Mits beschikbaar wordt met deze usernam eeen account aangemaakt" HorizontalAlignment="Left" Margin="30,71,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="registreer_button" Content="Registreer" HorizontalAlignment="Left" Margin="253,279,0,0" VerticalAlignment="Top" Width="174" Height="29" Click="registreer_button_Click"/>
-        <Label x:Name="wachtwoord_label" Content="Het toegewezen wachtwoord: " HorizontalAlignment="Left" Margin="124,205,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="registreer_button" Content="Registreer" HorizontalAlignment="Left" Margin="253,196,0,0" VerticalAlignment="Top" Width="174" Height="29" Click="registreer_button_Click"/>
 
     </Grid>
 </Window>

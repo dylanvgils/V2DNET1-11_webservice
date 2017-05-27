@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using StoreLogicLibrary;
 
 namespace StoreServiceWpfClient
 {
@@ -27,7 +28,13 @@ namespace StoreServiceWpfClient
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Orders SubWindow = new Orders();
-            SubWindow.saldo_label.Content = StoreLogicLibrary.StoreLogicService.GetBalance(username_label.Content.ToString());
+            SubWindow.username_label.Content = username_label.Content.ToString();
+            SubWindow.saldo_label.Content = "€" + StoreLogicService.GetBalance(username_label.Content.ToString());
+            foreach(StorageLogicLibrary.CustomerProduct p in StoreLogicService.GetAllOrders(username_label.Content.ToString()))
+            {
+                SubWindow.orders_listbox.Items.Add(p.Name + " | Aantal: " + p.Quantity + " | Gekocht voor: " + p.Price);
+            }
+
             SubWindow.Show();
             this.Close();
         }

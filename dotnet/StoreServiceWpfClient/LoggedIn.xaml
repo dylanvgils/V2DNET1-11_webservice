@@ -12,7 +12,6 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Border x:Name="mijnprofiel_button" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="53" Margin="36,302,0,0" VerticalAlignment="Top" Width="249" AutomationProperties.HelpText="Hier vind je alle account informatie, zoals orders en saldo" Grid.ColumnSpan="3"/>
         <Button Content="Mijn Profiel" HorizontalAlignment="Left" Margin="36,178,0,0" VerticalAlignment="Top" Width="417" Height="59" Grid.ColumnSpan="3" Click="Button_Click"/>
         <Button Content="Producten Kopen&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,262,0,0" VerticalAlignment="Top" Width="417" Height="59" Grid.ColumnSpan="3"/>
         <Label Content="Oreo Store" Grid.Column="1" HorizontalAlignment="Left" Margin="104,31,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20" Grid.ColumnSpan="2"/>
