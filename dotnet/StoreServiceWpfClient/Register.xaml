@@ -1,0 +1,20 @@
+﻿<Window x:Class="StoreServiceWpfClient.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StoreServiceWpfClient"
+        mc:Ignorable="d"
+        Title="Register" Height="345.614" Width="465.789">
+    <Grid Margin="2,0,-2,0">
+        <TextBox x:Name="username_textbox" HorizontalAlignment="Left" Height="23" Margin="307,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="140,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="username_label" Content="Voel hier uw gewenste gebruikersnaam in" HorizontalAlignment="Left" Margin="30,151,0,0" VerticalAlignment="Top"/>
+        <Button Content="Ga terug (Zonder opslaan)" HorizontalAlignment="Left" Margin="28,279,0,0" VerticalAlignment="Top" Width="174" Height="29"/>
+        <Label Content="Oreo Store" HorizontalAlignment="Left" Margin="104,31,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20"/>
+        <Label x:Name="username_label_Copy" Content="Je kunt hieronder een gebruikersnaam invoeren. &#xD;&#xA;Mits beschikbaar wordt met deze usernam eeen account aangemaakt" HorizontalAlignment="Left" Margin="30,71,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="registreer_button" Content="Registreer" HorizontalAlignment="Left" Margin="253,279,0,0" VerticalAlignment="Top" Width="174" Height="29" Click="registreer_button_Click"/>
+        <Label x:Name="wachtwoord_label" Content="Het toegewezen wachtwoord: " HorizontalAlignment="Left" Margin="124,205,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</Window>

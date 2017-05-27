@@ -8,16 +8,17 @@
         Title="MainWindow" Height="248.634" Width="326.571">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="133*"/>
-            <ColumnDefinition Width="387*"/>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Gebruikersnaam" HorizontalAlignment="Left" Margin="45,81,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Label Content="Wachtwoord" HorizontalAlignment="Left" Margin="45,112,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
-        <Button Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="83,172,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <TextBox x:Name="gebruikersnaam_textbox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="83,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="gebruikersnaam_textbox" TextChanged="gebruikersnaam_textbox_TextChanged"/>
-        <TextBox x:Name="wachtwoord_textbox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="83,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="wachtwoord_textbox"/>
-        <Button Content="Registreer" HorizontalAlignment="Left" Margin="45,172,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click" Grid.ColumnSpan="2"/>
-        <Label Content="Oreo Store" Grid.Column="1" HorizontalAlignment="Left" Margin="22,31,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20"/>
+        <Label Content="Gebruikersnaam" HorizontalAlignment="Left" Margin="45,81,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Label Content="Wachtwoord" HorizontalAlignment="Left" Margin="45,112,0,0" VerticalAlignment="Top" Grid.ColumnSpan="3"/>
+        <Button x:Name="login_button" Content="Login" Grid.Column="2" HorizontalAlignment="Left" Margin="43.183,172,0,0" VerticalAlignment="Top" Width="75" Click="login_button_Click"/>
+        <TextBox x:Name="gebruikersnaam_textbox" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="43.183,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="gebruikersnaam_textbox"/>
+        <TextBox x:Name="wachtwoord_textbox" Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="43.183,116,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" AutomationProperties.Name="wachtwoord_textbox"/>
+        <Button x:Name="register_button" Content="Registreer" HorizontalAlignment="Left" Margin="45,172,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="register_button_Click"/>
+        <Label Content="Oreo Store" Grid.Column="1" HorizontalAlignment="Left" Margin="22,31,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>

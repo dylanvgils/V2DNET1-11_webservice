@@ -13,36 +13,43 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using StoreLogicLibrary;
+using StoreServiceWpfClient;
 
 namespace WpfApp1
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LogInScreen.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
         {
-            InitializeComponent();
+                InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        
+        private void login_button_Click(object sender, RoutedEventArgs e)
         {
             if (StoreLogicService.VerifyLogin(
                 gebruikersnaam_textbox.Text,
-                wachtwoord_textbox.Text))
-            {
-
-            } else
+                wachtwoord_textbox.Text)) {
+                LoggedIn subWindow = new LoggedIn();
+                subWindow.username_label.Content = gebruikersnaam_textbox.Text;
+                subWindow.Show();
+                this.Close();
+            }
+            else
             {
                 // Fout wachtwoord
                 MessageBox.Show("Deze gebruikersnaam wachtwoord combinatie bestaat niet.");
             }
         }
 
-        private void gebruikersnaam_textbox_TextChanged(object sender, TextChangedEventArgs e)
+        private void register_button_Click(object sender, RoutedEventArgs e)
         {
-
+            Register subWindow = new Register();
+            subWindow.Show();
+            this.Close();
         }
+
     }
 }

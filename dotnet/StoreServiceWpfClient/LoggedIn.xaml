@@ -1,0 +1,24 @@
+﻿<Window x:Class="StoreServiceWpfClient.LoggedIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StoreServiceWpfClient"
+        mc:Ignorable="d"
+        Title="LoggedIn" Height="436.268" Width="505.986">
+    <Grid Margin="0,0,5,3">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="mijnprofiel_button" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="53" Margin="36,302,0,0" VerticalAlignment="Top" Width="249" AutomationProperties.HelpText="Hier vind je alle account informatie, zoals orders en saldo" Grid.ColumnSpan="3"/>
+        <Button Content="Mijn Profiel" HorizontalAlignment="Left" Margin="36,178,0,0" VerticalAlignment="Top" Width="417" Height="59" Grid.ColumnSpan="3" Click="Button_Click"/>
+        <Button Content="Producten Kopen&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,262,0,0" VerticalAlignment="Top" Width="417" Height="59" Grid.ColumnSpan="3"/>
+        <Label Content="Oreo Store" Grid.Column="1" HorizontalAlignment="Left" Margin="104,31,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20" Grid.ColumnSpan="2"/>
+        <Label Grid.ColumnSpan="3" Content="Welkom bij het hoofdscherm van de applicatie. &#xD;&#xA;Vanuit hier kun je producten kopen en de gekochte producten bekijken." HorizontalAlignment="Left" Margin="36,103,0,0" VerticalAlignment="Top" Height="42" Width="417"/>
+        <Label x:Name="welkom_label" Grid.ColumnSpan="3" Content="Welkom" HorizontalAlignment="Left" Margin="36,56,0,0" VerticalAlignment="Top" Height="42" Width="63"/>
+        <Label x:Name="username_label" Grid.ColumnSpan="3" Content="Mart" HorizontalAlignment="Left" Margin="90,56,0,0" VerticalAlignment="Top" Height="42" Width="63"/>
+
+    </Grid>
+</Window>
