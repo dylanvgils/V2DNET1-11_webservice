@@ -61,7 +61,10 @@ public class StoreController {
             return;
         }
 
-        if (!Service.buyProduct(model.getUsername(), item.getName(), quantity)) {
+        if (model.getBalance() < item.getPrice() * quantity) {
+            view.showError("Niet genoeg saldo", "U heeft niet voldoende saldo om het product te kopen.");
+            return;
+        } else if (!Service.buyProduct(model.getUsername(), item.getName(), quantity)) {
             view.showError("Niet genoeg voorraad", "Het aantal wat u wilt kopen hebben wij momenteel niet op voorraad.");
             return;
         }
