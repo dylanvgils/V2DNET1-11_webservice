@@ -5,19 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StoreServiceWpfClient"
         mc:Ignorable="d"
-        Title="LoggedIn" Height="436.268" Width="505.986">
+        Title="LoggedIn" Height="492.421" Width="505.986">
     <Grid Margin="0,0,5,3">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Content="Mijn Profiel" HorizontalAlignment="Left" Margin="36,178,0,0" VerticalAlignment="Top" Width="417" Height="59" Grid.ColumnSpan="3" Click="Button_Click"/>
-        <Button Content="Producten Kopen&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,262,0,0" VerticalAlignment="Top" Width="417" Height="59" Grid.ColumnSpan="3"/>
+        <Button Content="Mijn Profiel" HorizontalAlignment="Left" Margin="36,195,0,0" Width="417" Height="59" Grid.ColumnSpan="3" Click="Button_Click" VerticalAlignment="Top"/>
+        <Button x:Name="buy_product_button" Content="Producten Kopen&#xD;&#xA;" HorizontalAlignment="Left" Margin="36,251,0,96" VerticalAlignment="Center" Width="417" Height="59" Grid.ColumnSpan="3" Click="buy_product_button_Click"/>
         <Label Content="Oreo Store" Grid.Column="1" HorizontalAlignment="Left" Margin="104,31,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20" Grid.ColumnSpan="2"/>
         <Label Grid.ColumnSpan="3" Content="Welkom bij het hoofdscherm van de applicatie. &#xD;&#xA;Vanuit hier kun je producten kopen en de gekochte producten bekijken." HorizontalAlignment="Left" Margin="36,103,0,0" VerticalAlignment="Top" Height="42" Width="417"/>
         <Label x:Name="welkom_label" Grid.ColumnSpan="3" Content="Welkom" HorizontalAlignment="Left" Margin="36,56,0,0" VerticalAlignment="Top" Height="42" Width="63"/>
         <Label x:Name="username_label" Grid.ColumnSpan="3" Content="Mart" HorizontalAlignment="Left" Margin="90,56,0,0" VerticalAlignment="Top" Height="42" Width="63"/>
+        <Menu HorizontalAlignment="Right" Height="26" VerticalAlignment="Top" Width="496" Grid.ColumnSpan="3" Background="White">
+            <Button Content="Logout" Click="Button_Click_1"/>
+        </Menu>
 
     </Grid>
 </Window>

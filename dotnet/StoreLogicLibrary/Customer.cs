@@ -15,13 +15,13 @@ namespace StoreLogicLibrary
         public string Username { get; set; }
 
         [DataMember]
-        public double Balance { get; private set; } = 100.00;
+        public double Balance { get; private set; } = 10.00;
 
         [DataMember]
         public string Password { get; set; }
 
         [DataMember]
-        public List<CustomerProduct> Orders { get; set; } = new List<CustomerProduct>() { new CustomerProduct("Classic Oreo", 5, 10) };
+        public List<CustomerProduct> Orders { get; set; } = new List<CustomerProduct>();
 
         public Customer(string username)
         {

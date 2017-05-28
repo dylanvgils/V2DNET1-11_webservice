@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfApp1;
 
 namespace StoreServiceWpfClient
 {
@@ -22,6 +23,21 @@ namespace StoreServiceWpfClient
         public Orders()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            LoggedIn SubWindow = new LoggedIn();
+            SubWindow.username_label.Content = username_label.Content;
+            SubWindow.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MainWindow SubWindow = new MainWindow();
+            SubWindow.Show();
+            this.Close();
         }
     }
 }
