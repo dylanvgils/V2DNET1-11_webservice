@@ -38,7 +38,7 @@ namespace StoreServiceWpfClient
             foreach (StorageLogicLibrary.CustomerProduct p in 
                 StoreLogicService.GetAllOrders(username_label.Content.ToString()))
             {
-                SubWindow.orders_listbox.Items.Add(p.Name + " | Aantal: " + p.Quantity + " | Gekocht voor: " + p.Price);
+                SubWindow.orders_listbox.Items.Add(p.Name + " | Aantal: " + p.Quantity + " | Gekocht voor: " + p.Price + " per stuk");
             }
 
             SubWindow.Show();

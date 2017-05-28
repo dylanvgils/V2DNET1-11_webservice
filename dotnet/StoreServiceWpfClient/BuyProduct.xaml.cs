@@ -55,6 +55,10 @@ namespace StoreServiceWpfClient
             {
                 var ProductZin = product_listbox.SelectedItem.ToString().Split();
                 Product = ProductZin[0] + ' ' + ProductZin[1];
+                if (ProductZin[1] != "Oreo")
+                {
+                    Product += ' ' + ProductZin[2];
+                }
             }
             catch (Exception) {
                 MessageBox.Show("Fout: Heb je wel een product geselecteerd?");

@@ -5,23 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:StoreServiceWpfClient"
         mc:Ignorable="d"
-        Title="BuyProduct" Height="397.183" Width="375">
+        Title="BuyProduct" Height="418.137" Width="506.711">
     <Grid Margin="0,0,4.5,-28">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Label Content="Oreo Store" HorizontalAlignment="Left" Margin="144,20,0,0" VerticalAlignment="Top" FontFamily="Sitka Heading" FontSize="20" Grid.ColumnSpan="2"/>
-        <ListBox x:Name="product_listbox" HorizontalAlignment="Left" Height="59" Margin="35,129,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2"/>
+        <ListBox x:Name="product_listbox" HorizontalAlignment="Left" Height="59" Margin="35,129,0,0" VerticalAlignment="Top" Width="441" Grid.ColumnSpan="2"/>
         <Label Content="Dit zijn alle niet uitverkochte Oreo items in onze winkel;&#xD;&#xA;klik er een aan en selecteer een aantal om te kopen&#xD;&#xA;" HorizontalAlignment="Left" Height="41" Margin="35,60,0,0" VerticalAlignment="Top" Width="300" Grid.ColumnSpan="2"/>
-        <Button x:Name="refresh_button" Content="RF" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="87.5,203,0,0" VerticalAlignment="Top" Width="28" Click="refresh_button_Click"/>
-        <Menu HorizontalAlignment="Right" Height="20" Margin="0,0,-0.5,0" VerticalAlignment="Top" Width="366" Grid.ColumnSpan="2" Background="White">
+        <Button x:Name="refresh_button" Content="Refresh" Grid.Column="1" HorizontalAlignment="Left" Height="18" Margin="88,193,0,0" VerticalAlignment="Top" Width="90" Click="refresh_button_Click"/>
+        <Menu HorizontalAlignment="Right" Height="20" Margin="0,0,-1,0" VerticalAlignment="Top" Width="498" Grid.ColumnSpan="2" Background="White">
             <Button Content="Logout" Click="Button_Click_1"/>
             <Button Content="Hoofdmenu" Click="Button_Click"/>
         </Menu>
-        <TextBox x:Name="hoeveelheid_textbox" HorizontalAlignment="Left" Height="37" Margin="35,231,0,0" TextWrapping="Wrap" Text="Voer aantal in cijfers in" VerticalAlignment="Top" Width="71"/>
-        <Button x:Name="kopen_button" Grid.ColumnSpan="2" Content="Kopen" HorizontalAlignment="Left" Height="34" Margin="35,283,0,0" VerticalAlignment="Top" Width="300" Click="kopen_button_Click"/>
+        <TextBox x:Name="hoeveelheid_textbox" HorizontalAlignment="Left" Height="28" Margin="172,269,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46"/>
+        <Button x:Name="kopen_button" Grid.ColumnSpan="2" Content="Kopen" HorizontalAlignment="Left" Height="34" Margin="35,333,0,0" VerticalAlignment="Top" Width="441" Click="kopen_button_Click"/>
         <Label x:Name="username_label" Content="Label" HorizontalAlignment="Left" Margin="160,231,0,0" VerticalAlignment="Top" Visibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
+        <Label Content="Voer aantal in cijfers in:" HorizontalAlignment="Left" Margin="35,271,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
