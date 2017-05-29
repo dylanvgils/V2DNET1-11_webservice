@@ -1,8 +1,11 @@
 package oreoStore.controller;
 
+import oreoStore.model.CustomerModel;
 import oreoStore.service.Service;
 import oreoStore.model.StoreModel;
 import oreoStore.model.StoreProductModel;
+import oreoStore.view.RegisterView;
+import oreoStore.view.SignInView;
 import oreoStore.view.StoreView;
 
 import java.awt.event.ActionEvent;
@@ -22,6 +25,7 @@ public class StoreController {
         // Event Listeners
         view.addOrderListener(this::createOrder);
         view.addRefreshListener(this::refresh);
+        view.addSignOutListener(this::signOut);
 
         // show view
         view.init();
@@ -67,5 +71,10 @@ public class StoreController {
         }
 
         fetchAndViewData();
+    }
+
+    private void signOut(ActionEvent event) {
+        view.close();
+        new SignInController(new SignInView(), new CustomerModel());
     }
 }

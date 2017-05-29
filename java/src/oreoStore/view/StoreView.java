@@ -22,6 +22,7 @@ public class StoreView {
     private JLabel balance;
     private JTextField quantity;
     private JLabel user;
+    private JButton signOutBtn;
 
     public void init() {
         frame = new JFrame("Oreo Store");
@@ -83,11 +84,19 @@ public class StoreView {
         JOptionPane.showMessageDialog(null, message, title, JOptionPane.ERROR_MESSAGE);
     }
 
+    public void close() {
+        frame.dispose();
+    }
+
     public void addRefreshListener(ActionListener listener) {
         refreshBtn.addActionListener(listener);
     }
 
     public void addOrderListener(ActionListener listener) {
         orderBtn.addActionListener(listener);
+    }
+
+    public void addSignOutListener(ActionListener listener) {
+        signOutBtn.addActionListener(listener);
     }
 }
