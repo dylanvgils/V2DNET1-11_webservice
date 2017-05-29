@@ -21,6 +21,7 @@ public class RegisterController {
 
         // Event listeners
         view.addRegisterListener(this::register);
+        view.addCancelListener(this::cancel);
 
         // Show view
         view.init();
@@ -38,5 +39,10 @@ public class RegisterController {
 
         view.resetUsernameField();
         view.showError("Registratiefout", "Helaas is deze gebruikersnaam is al in gebruik.");
+    }
+
+    private void cancel(ActionEvent event) {
+        view.close();
+        new SignInController(new SignInView(), new CustomerModel());
     }
 }

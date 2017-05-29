@@ -11,6 +11,7 @@ public class RegisterView {
     private JTextField usernameField;
     private JPanel mainPanel;
     private JButton registerBtn;
+    private JButton cancelBtn;
 
     public void init() {
         frame = new JFrame("Oreo Store - Registreren");
@@ -32,6 +33,10 @@ public class RegisterView {
 
     public void addRegisterListener(ActionListener listener) {
         registerBtn.addActionListener(listener);
+    }
+
+    public void addCancelListener(ActionListener listener) {
+        cancelBtn.addActionListener(listener);
     }
 
     public void confirmRegistration(String username, String password) {
