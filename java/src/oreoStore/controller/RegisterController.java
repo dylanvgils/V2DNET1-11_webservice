@@ -30,6 +30,11 @@ public class RegisterController {
     private void register(ActionEvent event) {
         model.setUsername(view.getUsernameFieldValue());
 
+        if (model.getUsername().isEmpty()) {
+            view.showError("Registratiefout", "Het gebruikersnaam veld mag niet leeg zijn.");
+            return;
+        }
+
         if (Service.registerCustomer(model) != null) {
             view.confirmRegistration(model.getUsername(), model.getPassword());
             view.close();
