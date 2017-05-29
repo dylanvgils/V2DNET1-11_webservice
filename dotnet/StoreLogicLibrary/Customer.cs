@@ -41,10 +41,9 @@ namespace StoreLogicLibrary
             return Username.Equals(username) && Password.Equals(password);
         }
 
-        public bool UpdateBalance(double price)
+        public bool CheckBalance(double price)
         {
             if (Balance < price) return false;
-            Balance -= price;
             return true;
         }
 
@@ -57,6 +56,7 @@ namespace StoreLogicLibrary
                 return;
             }
 
+            Balance -= p.Price * p.Quantity;
             Orders.Add(p);
         }
     }

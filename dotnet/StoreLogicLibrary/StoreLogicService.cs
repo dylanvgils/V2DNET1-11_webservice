@@ -18,7 +18,12 @@ namespace StoreLogicLibrary
 
         public static bool RegisterCustomer(Customer c)
         {
-            return StoreLogicRepository.GetCustomer(c.Username) == null && StoreLogicRepository.AddCustomer(c);
+            if (c.Username != null && c.Username != String.Empty)
+            {
+                return StoreLogicRepository.GetCustomer(c.Username) == null && StoreLogicRepository.AddCustomer(c);
+            }
+
+            return false;
         }
 
         public static bool BuyProduct(string username, string productNaam, int quantity)
@@ -28,7 +33,8 @@ namespace StoreLogicLibrary
                 var p = StoreLogicRepository.GetProduct(productNaam);
                 var c = StoreLogicRepository.GetCustomer(username);
 
-                if (!c.UpdateBalance(p.Price * quantity) || !p.LowerStock(quantity)) return false;
+                if (!(p.CheckStock(quantity) && c.CheckBalance(p.Price * quantity))) return false;
+                p.LowerStock(quantity);
                 c.AddOrder(new CustomerProduct(p.Name, quantity, p.Price));
                 return true;
             }

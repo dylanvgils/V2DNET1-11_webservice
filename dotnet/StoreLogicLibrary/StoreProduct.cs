@@ -19,9 +19,15 @@ namespace StorageLogicLibrary
             Stock = stock;
         }
 
-        public bool LowerStock(int quantity)
+        public bool CheckStock(int quantity)
         {
             if (Stock < quantity) return false;
+            return true;
+        }
+
+        public bool LowerStock(int quantity)
+        {
+            if (!CheckStock(quantity)) return false;
             Stock -= quantity;
             return true;
         }
