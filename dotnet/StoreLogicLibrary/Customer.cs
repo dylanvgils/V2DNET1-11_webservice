@@ -15,7 +15,7 @@ namespace StoreLogicLibrary
         public string Username { get; set; }
 
         [DataMember]
-        public double Balance { get; private set; } = 100.00;
+        public double Balance { get; private set; } = 10.00;
 
         [DataMember]
         public string Password { get; set; }

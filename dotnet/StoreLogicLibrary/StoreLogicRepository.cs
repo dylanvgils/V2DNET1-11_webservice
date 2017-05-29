@@ -1,4 +1,5 @@
-﻿using StoreLogicLibrary;
+﻿
+using StoreLogicLibrary;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,14 @@ namespace StoreLogicLibrary
     {
 
         public static List<Customer> Customers = new List<Customer>() { new Customer("dylan") };
-        public static List<StoreProduct> Products = new List<StoreProduct>() { new StoreProduct("Classic Oreo", 15, .99), new StoreProduct("Vanilla Oreo", 5, 1.05)};
+        public static List<StoreProduct> Products = new List<StoreProduct>() {
+            new StoreProduct("Classic Oreo", 15, .99),
+            new StoreProduct("Marshmallow Crispy Oreo", 8, 1.99),
+            new StoreProduct("Candy Corn Oreo", 3, 2.99),
+            new StoreProduct("Fruit Punch Oreo", 6, .70),
+            new StoreProduct("Banana Split Oreo", 35, 4.99),
+            new StoreProduct("Vanilla Oreo", 5, 1.05)
+        };
 
         public static Customer GetCustomer(string username)
         {
