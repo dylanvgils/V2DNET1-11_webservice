@@ -12,8 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using StoreLogicLibrary;
 using StoreServiceWpfClient;
+using StoreServiceWpfClient.StoreServiceHost;
 
 namespace WpfApp1
 {
@@ -22,6 +22,8 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        StoreServiceClient storeservice = new StoreServiceClient();
+
         public MainWindow()
         {
                 InitializeComponent();
@@ -29,12 +31,15 @@ namespace WpfApp1
         
         private void login_button_Click(object sender, RoutedEventArgs e)
         {
-            if (StoreLogicService.VerifyLogin(
-                gebruikersnaam_textbox.Text,
+            ;
+
+            if (storeservice.CheckLogin(gebruikersnaam_textbox.Text,
                 wachtwoord_textbox.Text)) {
+
                 LoggedIn subWindow = new LoggedIn();
                 subWindow.username_label.Content = gebruikersnaam_textbox.Text.ToString();
                 subWindow.Show();
+
                 this.Close();
             }
             else

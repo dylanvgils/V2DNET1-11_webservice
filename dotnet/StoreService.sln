@@ -10,6 +10,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreLogicLibrary", "StoreLogicLibrary\StoreLogicLibrary.csproj", "{C3F8B4A6-5035-4BD3-86E6-C131AA3363ED}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreServiceWpfClient", "StoreServiceWpfClient\StoreServiceWpfClient.csproj", "{6AFD8EF9-CDEA-46D3-8119-0DBC69A46631}"
+	ProjectSection(ProjectDependencies) = postProject
+		{04E84B1B-92E0-4891-ACDF-FF541C2680A7} = {04E84B1B-92E0-4891-ACDF-FF541C2680A7}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

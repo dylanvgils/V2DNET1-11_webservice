@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/StorageLogicLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/StorageLogicLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/StoreLogicLibrary" />
+  <xs:complexType name="ArrayOfStoreProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StoreProduct" nillable="true" type="tns:StoreProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStoreProduct" nillable="true" type="tns:ArrayOfStoreProduct" />
+  <xs:complexType name="StoreProduct">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/StoreLogicLibrary" base="q1:Product">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Stock" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StoreProduct" nillable="true" type="tns:StoreProduct" />
+  <xs:complexType name="ArrayOfCustomerProduct">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CustomerProduct" nillable="true" type="tns:CustomerProduct" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomerProduct" nillable="true" type="tns:ArrayOfCustomerProduct" />
+  <xs:complexType name="CustomerProduct">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/StoreLogicLibrary" base="q2:Product">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CustomerProduct" nillable="true" type="tns:CustomerProduct" />
+</xs:schema>

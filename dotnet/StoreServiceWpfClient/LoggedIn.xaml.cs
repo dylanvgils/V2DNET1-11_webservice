@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using StoreLogicLibrary;
 using WpfApp1;
+using StoreServiceWpfClient.StoreServiceHost;
 
 namespace StoreServiceWpfClient
 {
@@ -21,6 +22,7 @@ namespace StoreServiceWpfClient
     /// </summary>
     public partial class LoggedIn : Window
     {
+        StoreServiceClient storeservice = new StoreServiceClient();
         public LoggedIn()
         {
             InitializeComponent();
@@ -32,11 +34,11 @@ namespace StoreServiceWpfClient
 
             // Username en saldo zetten
             SubWindow.username_label.Content = username_label.Content.ToString();
-            SubWindow.saldo_label.Content = "€" + StoreLogicService.GetBalance(username_label.Content.ToString());
+            SubWindow.saldo_label.Content = "€" + storeservice.GetBalance(username_label.Content.ToString());
 
             // Alle gekochte producten ophalen en zetten
-            foreach (StorageLogicLibrary.CustomerProduct p in 
-                StoreLogicService.GetAllOrders(username_label.Content.ToString()))
+            foreach (var p in
+                storeservice.GetAllOrders(username_label.Content.ToString()))
             {
                 SubWindow.orders_listbox.Items.Add(p.Name + " | Aantal: " + p.Quantity + " | Gekocht voor: " + p.Price + " per stuk");
             }
@@ -50,9 +52,8 @@ namespace StoreServiceWpfClient
             BuyProduct SubWindow = new BuyProduct();
             SubWindow.username_label.Content = username_label.Content.ToString();
 
-            foreach (StorageLogicLibrary.StoreProduct p in StoreLogicService.GetProducts())
+            foreach (var p in storeservice.GetProducts())
             {
-
                 SubWindow.product_listbox.Items.Add(p.Name + " kost " + p.Price + " en er zijn er nog " + p.Stock + " aanwezig");
             }
 

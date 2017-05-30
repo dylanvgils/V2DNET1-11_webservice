@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using WpfApp1;
 using StoreLogicLibrary;
+using StoreServiceWpfClient.StoreServiceHost;
 
 namespace StoreServiceWpfClient
 {
@@ -21,6 +22,8 @@ namespace StoreServiceWpfClient
     /// </summary>
     public partial class BuyProduct : Window
     {
+        StoreServiceClient storeservice = new StoreServiceClient();
+
         public BuyProduct()
         {
             InitializeComponent();
@@ -75,7 +78,7 @@ namespace StoreServiceWpfClient
                 return;
             }
 
-            if (StoreLogicService.BuyProduct(username_label.Content.ToString(), Product, quantity))
+            if (storeservice.BuyProduct(username_label.Content.ToString(), Product, quantity))
             {
                 RefreshProducts();
                 MessageBox.Show("Je hebt " + Product + " succesvol gekocht!");
@@ -92,7 +95,7 @@ namespace StoreServiceWpfClient
         {
             product_listbox.Items.Clear();
 
-            foreach (StorageLogicLibrary.StoreProduct p in StoreLogicService.GetProducts())
+            foreach (var p in storeservice.GetProducts())
             {
                 product_listbox.Items.Add(p.Name + " kost " + p.Price + " en er zijn er nog " + p.Stock + " aanwezig");
             }

@@ -49,8 +49,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="StorageLogicLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -71,6 +74,11 @@
     </ApplicationDefinition>
     <Compile Include="BuyProduct.xaml.cs">
       <DependentUpon>BuyProduct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\StoreServiceHost\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="LoggedIn.xaml.cs">
       <DependentUpon>LoggedIn.xaml</DependentUpon>
@@ -128,6 +136,21 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\StoreServiceHost\service.wsdl" />
+    <None Include="Connected Services\StoreServiceHost\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StoreServiceHost\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StoreServiceHost\StorageLogicLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\StoreServiceHost\StoreLogicLibrary.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\StorageLogicLibrary.CustomerProduct.datasource" />
+    <None Include="Properties\DataSources\StorageLogicLibrary.StoreProduct.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -135,12 +158,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\StoreLogicLibrary\StoreLogicLibrary.csproj">
-      <Project>{c3f8b4a6-5035-4bd3-86e6-c131aa3363ed}</Project>
-      <Name>StoreLogicLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -153,6 +170,24 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\StoreServiceHost\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StoreServiceHost\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StoreServiceHost\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\StoreServiceHost\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
